@@ -22,3 +22,9 @@
         @content;
     }
 }
+
+@mixin maxHeight ($size) {
+    @media only screen and (max-height: $size) {
+        @content;
+    }
+}

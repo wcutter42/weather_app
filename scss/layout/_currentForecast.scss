@@ -89,6 +89,9 @@
             @include mqh(1080px) {
                 margin-top: 1.5;
             }
+            @include maxHeight (919px) {
+                font-size: 1.3rem;
+            }
         }
 
         .feels {
@@ -97,6 +100,9 @@
             grid-column: 1 / span 4;
             padding-top: 0.5rem;
             font-weight: normal;
+            @include maxHeight (919px) {
+                font-size: 1.3rem;
+            }
         }
 
         .humidity {
@@ -107,6 +113,9 @@
             font-weight: normal;
             color: $fadecolor;
             @include flexCenter;
+            @include maxHeight (919px) {
+                font-size: 1.3rem;
+            }
         }
 
         .wind {
@@ -117,6 +126,9 @@
             font-weight: normal;
             color: $fadecolor;
             @include flexCenter;
+            @include maxHeight (919px) {
+                font-size: 1.3rem;
+            }
         }
     }
 }
