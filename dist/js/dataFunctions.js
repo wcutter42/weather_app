@@ -42,7 +42,7 @@ export const getWeatherFromCoords = async (locationObj) => {
     }
 };
 
-export const getCoordsFromApi = async (entryText) => {
+export const getCoordsFromApi = async (entryText, units) => {
     /* let url;
     const regex = /^\d+$/g;
     const flag = regex.test(entryText) ? "zip" : "q";
