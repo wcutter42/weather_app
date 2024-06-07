@@ -262,20 +262,9 @@ hr {
   padding-top: 0.5rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
-}
-@media only screen and (max-width: 1024px) and (min-height: 700px) {
-  .currentForecast .currentForecast__conditions .humidity {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media only screen and (min-height: 1080px) {
-  .currentForecast .currentForecast__conditions .humidity {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .currentForecast .currentForecast__conditions .wind {
   display: none;
@@ -284,20 +273,9 @@ hr {
   padding-top: 0.5rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
-}
-@media only screen and (max-width: 1024px) and (min-height: 700px) {
-  .currentForecast .currentForecast__conditions .wind {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media only screen and (min-height: 1080px) {
-  .currentForecast .currentForecast__conditions .wind {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dailyForecast .dailyForecast__title {
