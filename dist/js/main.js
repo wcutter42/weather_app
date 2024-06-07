@@ -144,8 +144,27 @@ const submitNewLocation = async (event) => {
     const locationIcon = document.querySelector(".fa-solid");
     addSpinner(locationIcon);
     
-    const coordsData = await getCoordsFromApi(entryText);
-    if (!coordsData) {
+    const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
+    if (coordsData) {
+        if (coordsData.cod === 200) {
+            const myCoordsObj = {
+               lat: coordsData.coord.lat,
+               lon: coordsData.coord.lon,
+               name: coordsData.sys.country 
+               ? `${coordsData.name}, ${coordsData.sys.country}` 
+               : coordsData.name
+            };
+            setLocationObject(currentLoc, myCoordsObj);
+            updateDataAndDisplay(currentLoc);
+        } else {
+            displayApiError(coordsData);
+        }
+    } else {
+        displayError("Connection Error", "Connection Error");
+    }
+
+
+    /* if (!coordsData) {
         displayError("Connection Error", "Connection Error");
         return;
     }
@@ -168,7 +187,7 @@ const submitNewLocation = async (event) => {
     };
     
     setLocationObject(currentLoc, myCoordsObj);
-    updateDataAndDisplay(currentLoc);
+    updateDataAndDisplay(currentLoc); */
 };
 
 
